@@ -1,0 +1,16 @@
+Steps to be executed before localities rating release
+
+1) Queries needs to be run (Please refer stagedb for any query)
+
+	a) Need to add 'area_rating' column in areas table for overall rating default value should be null.
+	b) Need to create a table for all categories of rating table name "locality_rating_categories" column (id (int),category_name (varchar),description (varchar)).
+	c) Need to create a table for storign value of ratings category for localities table name "locality_rating" column (area_id (int), category_id (int), category_rating (float) , is_deleted (tinyint) ).
+	d)Need to add the description for each category rating.
+
+Steps to be executed before localities/city masthead release
+
+1) Queries need to be run (Please refer stagedb for any query)
+
+	a) Need to add columns 'is_masthead' with default value 0 and 'masthead_id' with default value null.
+	b) Need to create input and output directries with read , write permissions for localities masthead images input directory in nfsshare and output directory "html/public/images/gallery/locality_masthead".
+	c) Need to run the script for locality masthead.
